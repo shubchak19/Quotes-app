@@ -1,0 +1,7 @@
+.links .active {
+  @apply relative;
+}
+
+.links .active::before {
+  @apply content-[""] h-1 w-full absolute left-0 -bottom-1 bg-orange-600 rounded-xl;
+}
