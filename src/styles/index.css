@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "./links.css";
+@import "./scrollbar.css";
+@import "./tooltip.css";
+
+.flex-center {
+  @apply flex flex-col justify-center items-center;
+}
+
+button {
+  @apply cursor-pointer active:scale-95;
+}
+
+.curtain {
+  @apply relative;
+}
+
+.curtain::before {
+  @apply content-[''] bg-gray-900 opacity-60 absolute top-0 bottom-0 left-0 right-0;
+}

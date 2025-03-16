@@ -1,17 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./assests/css/index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "@/styles/index.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "react-loading-skeleton/dist/skeleton.css";
 import { Provider } from "react-redux";
+import { RouterProvider } from "react-router-dom";
 import store from "./redux/store.ts";
-import { routes } from "./constants/routes.tsx";
+import router from "./router";
 
-const router = createBrowserRouter(routes, { basename: "/quote-app/" });
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}/>
     </Provider>
-  </React.StrictMode>
+  </StrictMode>
 );

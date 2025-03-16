@@ -1,0 +1,15 @@
+.active {
+  @apply relative;
+}
+
+.links .active::before {
+  @apply content-[""] h-1 w-6 absolute left-[20%] -bottom-0 bg-orange-500 rounded-xl;
+}
+
+.mobile-links .active::before{
+  @apply content-[""] h-1 w-full absolute left-0 -bottom-0 bg-orange-500 rounded-xl;
+}
+
+.links .active:hover::after {
+  @apply top-2;
+}

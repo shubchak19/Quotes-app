@@ -1,0 +1,22 @@
+[data-title] {
+  @apply relative;
+}
+
+[data-title]::after {
+  content: attr(data-title);
+  @apply hidden absolute w-fit py-2 px-4 text-sm font-bold text-black bg-white rounded-md text-nowrap z-10;
+}
+
+[data-title]:hover::after {
+  @apply inline-block left-14 top-1;
+}
+
+.horizontal [data-title]:hover::after {
+  @apply inline-block -left-3 -top-11;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .horizontal [data-title]:focus::after {
+    @apply inline-block -left-3 -top-11;
+  }
+}
